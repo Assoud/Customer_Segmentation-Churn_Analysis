@@ -18,6 +18,9 @@ The Employee Insights Dashboard project aims to analyze employee behavior and tr
 - **Data Cleaning**: The data underwent thorough cleaning to address issues such as missing values, duplicates, and inconsistencies. Power Query scripts were used to transform the data into a structured format suitable for analysis.
 - **Attendance Key**: The attendance key provides a reference for interpreting the codes used in the dataset to denote different types of employee attendance, such as present, sick leave, work from home, etc. This key was used during the data cleaning and preprocessing phase to standardize attendance records.
 
+### Attendance Key
+
+| Code | Description                |
 |------|----------------------------|
 | P    | Present                    |
 | PL   | Paid Leave                 |
