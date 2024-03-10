@@ -55,6 +55,17 @@ The Employee Insights Dashboard project aims to analyze employee behavior and tr
 - **Presence Percentage**: A metric was created to calculate the percentage of days each employee was present in the office or working remotely.
 - **WFH Percentage**: Another metric was developed to determine the percentage of days employees chose to work from home.
 - **Sick Leave Percentage**: A metric was generated to quantify the percentage of days employees took sick leave, shedding light on potential health-related issues.
+- **Dax-Measures**
+  `
+  Office Working days = Var totaldays = [Count]
+  VAR nonworkdays = CALCULATE([Count],'Final Data'[Value] in {"HO", "WO"})
+  RETURN
+  totaldays-nonworkdays `
+
+` SL % = DIVIDE('Measures (2)'[SL Count], [Office Working days]`
+` WFH % = DIVIDE([WFH Count],'Measures (2)'[Present Days],0)`
+` Attendace % = DIVIDE([Present Days],[Office Working days],0)`
+` HFWH Count = CALCULATE([Count],'Final Data'[Value]="HWFH")`
 
 ## Dashboard Creation
 - **Overview**: A Power BI dashboard was created to visualize key insights derived from the data analysis.
